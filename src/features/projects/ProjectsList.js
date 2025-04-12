@@ -1,15 +1,21 @@
-import ProjectCard, { Projects } from "./ProjectCard";
-import { PROJECTS } from "../../app/shared/PROJECTS";
+// import ProjectCard, { Projects } from "./ProjectCard";
+import ProjectCard from "./ProjectCard"
 import { Col, Row} from "reactstrap";
+import { selectAllProjects } from "./projectsSlice";
 
-const ProjectsList = () => {
-
+const ProjectsList = ({ setProjectId }) => {
+    const projects = selectAllProjects();  
 
     return(
             <Row className="ms-auto"> 
-               {PROJECTS.map((project) => {
+               {projects.map((project) => {
                         return (
-                            <Col md='5' className='m-4' key={project.id}>
+                            <Col 
+                                md='5' 
+                                className='m-4' 
+                                key={project.id}
+                                onClick={() => setProjectId(project.id)}
+                            >
                                 <ProjectCard project={project} />
                             </Col>
                         );

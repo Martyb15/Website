@@ -4,7 +4,7 @@ import ProjectLogo from "../app/assets/img/logo.png";
 
 const Header = () => {
     return(
-        <Navbar dark color="primary" sticky="top" expand="md" className="navbar">
+        <Navbar dark color="secondary" sticky="top" expand="md" className="navbar">
         <Container>
             <NavbarBrand href="/">
               <img src={ProjectLogo} alt="Logo" className="logo-img"/>

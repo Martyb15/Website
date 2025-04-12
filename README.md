@@ -44,3 +44,15 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
+
+
+
+
+What will this project achieve? 
+- The goal is to have a website where recruiters can visit and view my projects. 
+- The projects will be selected, as they will be displayed as cards for the users to choose from. 
+- When a project is selected, details about the project will be displayed. 
