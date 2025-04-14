@@ -1,0 +1,28 @@
+/* Reduce navbar height and padding */
+.navbar {
+    padding: 0.5rem 1rem; /* Adjust padding to make the navbar smaller */
+  }
+  
+  /* Control logo size */
+  .logo-img {
+    height: 50px; /* Adjust this based on your preference */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Center logo and text vertically */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Adjust the h1 text size and spacing */
+  .navbar-brand h1 {
+    font-size: 1.5rem; /* Reduce the h1 size if needed */
+    line-height: 1; /* Prevent extra line height spacing */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Optional: Adjust nav links spacing */
+  .nav-link {
+    padding: 0.5rem 1rem; /* Adjust spacing between nav items */
+  }
