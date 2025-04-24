@@ -51,3 +51,77 @@
   padding-bottom: 0.5rem;
 
 }
+
+.site-footer {
+  background-color: #6c757d; /* Dark gray, matching bg-secondary */
+  color: #ffffff; /* White text for contrast */
+  padding: 2rem 0; /* Add some padding for spacing */
+}
+
+.site-footer h5 {
+  color: #ffffff; /* Ensure the headings are white */
+  margin-bottom: 1rem; /* Space below headings */
+}
+
+.site-footer a {
+  color: #d1d1d1; /* Light gray for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.site-footer a:hover {
+  color: #17a2b8; /* Light blue on hover for interactivity */
+}
+
+.site-footer .btn-social-icon {
+  color: #ffffff; /* White icons */
+  margin: 0 0.5rem; /* Space between social icons */
+}
+
+.site-footer .btn-social-icon:hover {
+  color: #17a2b8; /* Same hover color for consistency */
+}
+
+.page-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600; /* Semi-bold for emphasis */
+    letter-spacing: 0.5px; /* Slight letter spacing for a modern look */
+    color: #354253; /* Dark gray for contrast (adjust if needed) */
+}
+
+
+/* Reduce navbar height and padding */
+.navbar {
+  padding: 0.5rem 1rem; /* Adjust padding to make the navbar smaller */
+}
+
+/* Control logo size */
+.logo-img {
+  height: 50px; /* Adjust this based on your preference */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Center logo and text vertically */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust the h1 text size and spacing */
+.navbar-brand h1 {
+  font-size: 1.5rem; /* Reduce the h1 size if needed */
+  line-height: 1; /* Prevent extra line height spacing */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Optional: Adjust nav links spacing */
+.nav-link {
+  padding: 0.5rem 1rem; /* Adjust spacing between nav items */
+}
+
+
+
+
+
+
+

@@ -1,15 +1,15 @@
-import reactLakeImg from '../assets/img/react-lake.jpg';
 import chromeRiverImg from '../assets/img/chrome-river.jpg';
 import breadCrumbImg from '../assets/img/breadcrumb-trail.jpg';
 import reduxWoodsImg from '../assets/img/redux-woods.jpg';
+import vigenereCipher from '../assets/img/vigenere-cipher.jpg'
 
 export const PROJECTS = [
     {
         id: 0,
         name: 'Vigenere Cipher',
-        image: reactLakeImg,
+        image: vigenereCipher,
         elevation: 1233,
-        featured: false,
+        featured: true,
         description:
             'Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.'
     },
@@ -36,7 +36,7 @@ export const PROJECTS = [
         name: 'Pygame',
         image: reduxWoodsImg,
         elevation: 42,
-        featured: true,
+        featured: false,
         description:
             "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
     }

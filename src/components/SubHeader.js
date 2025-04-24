@@ -16,7 +16,7 @@ const SubHeader = ({current, detail}) => {
                         )} 
                     <BreadcrumbItem active>{current}</BreadcrumbItem>
                 </Breadcrumb>
-                <h2>{current}</h2>
+                <h2 className="page-title">{current}</h2>
                 <hr />
             </Col>
         </Row>

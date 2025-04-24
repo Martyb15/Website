@@ -3,7 +3,7 @@ import gitLogo from '../assets/img/git-logo.png';
 import mongoLogo from '../assets/img/mongo-logo.png';
 import nodeLogo from '../assets/img/node-logo.png';
 
-export const PARTNERS = [
+export const SKILLS = [
     {
         id: 0,
         name: 'Bootstrap Outfitters',

@@ -25,6 +25,4 @@ const ProjectsList = ( { setProjectId } ) => {
 
     );
 };
-export default ProjectsList; 
-
-
+export default ProjectsList;
