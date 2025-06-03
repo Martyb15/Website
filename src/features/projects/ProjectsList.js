@@ -1,6 +1,6 @@
 // import ProjectCard, { Projects } from "./ProjectCard";
 import ProjectCard from "./ProjectCard"
-import { Col, Row} from "reactstrap";
+import { Col, Row } from "reactstrap";
 import { selectAllProjects } from "./projectsSlice";
 
 const ProjectsList = ( { setProjectId } ) => {

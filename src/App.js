@@ -8,8 +8,11 @@ import HomePage from './pages/HomePage.js';
 import ContactPage from './pages/ContactPage.js';
 import ProjectDetailPage from './pages/ProjectsDetailPage.js'; 
 import AboutPage from './pages/AboutPage.js';
+import { useSelector } from 'react-redux';          // ALSO PART OF TEST
 
 function App() {
+  const wholeStore = useSelector(state => state);   // 1️⃣ read everything         PART OF TEST
+  console.log('Store contents:', wholeStore);       // 2️⃣ should log an object    PART OF TEST
 
 
   return (
