@@ -15,8 +15,8 @@ import 'typeface-open-sans';
 const container = document.getElementById('root');
 const root = createRoot(container);
 
-  console.log('disPatch',store.dispatch);
-  console.log('stAte',store.getState());
+  // console.log('disPatch',store.dispatch);
+  // console.log('stAte',store.getState());
 
 
 root.render(

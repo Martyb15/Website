@@ -1,8 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { projectsReducer } from '../features/projects/projectsSlice';
+import { commentsReducer } from '../features/comments/commentsSlice';
+import { skillsReducer } from '../features/skills/skillsSlice';
+import { promotionsReducer } from '../features/promotions/promotionsSlice';
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    projects:    projectsReducer,
+    comments:    commentsReducer,
+    skills:      skillsReducer,
+    promotions:  promotionsReducer
   },
 });
+
+console.log(store.getState());

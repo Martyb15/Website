@@ -1,9 +1,10 @@
 import { Col } from "reactstrap";
 import { selectAllSkills } from "./skillsSlice";
 import Skill from "./Skill"
+import { useSelector } from "react-redux";
 
 const SkillsList = () => {
-    const skills = selectAllSkills();  
+    const skills = useSelector(selectAllSkills);  
 
     if (!skills || skills.length === 0) {
         return (

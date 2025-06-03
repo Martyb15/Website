@@ -1,9 +1,21 @@
-import { SKILLS } from "../../app/shared/SKILLS"
+import { SKILLS } from "../../app/shared/SKILLS";
+import { createSlice } from '@reduxjs/toolkit'; 
 
-export const selectFeaturedSkill = () => {
-    return SKILLS.find((skill) => skill.featured);
+const initialState = {
+    skillsArray: SKILLS
 };
 
-export const selectAllSkills = () => {
-    return SKILLS;
+const skillsSlice = createSlice({
+    name: 'skills',
+    initialState
+});
+
+export const skillsReducer = skillsSlice.reducer;
+
+export const selectFeaturedSkill = (state) => {
+    return state.skills.skillsArray.find((skill) => skill.featured);
+};
+
+export const selectAllSkills = (state) => {
+    return state.skills.skillsArray;
 };

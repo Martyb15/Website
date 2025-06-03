@@ -2,9 +2,10 @@ import { Col } from "reactstrap";
 import Comment from './Comment';
 import { selectCommentsByProjectId } from "./commentsSlice";
 import CommentForm from "./CommentForm";
+import { useSelector } from "react-redux";
 
 const CommentsList = ({ projectId }) => {
-    const comments = selectCommentsByProjectId(projectId);
+    const comments = useSelector(selectCommentsByProjectId(projectId));
 
     if (comments && comments.length > 0) {
         console.log(comments)

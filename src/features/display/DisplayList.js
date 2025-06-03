@@ -4,9 +4,14 @@ import AnimatedDisplayCard from './AnimatedDisplayCard';
 import { selectFeaturedProject } from '../projects/projectsSlice';
 import { selectFeaturedPromotion } from '../promotions/promotionsSlice';
 import { selectFeaturedSkill } from '../skills/skillsSlice';
+import { useSelector } from 'react-redux';
 
 const DisplayList = () => {
-    const items = [selectFeaturedProject(),selectFeaturedPromotion(),selectFeaturedSkill()]
+    const items = useSelector((state) => [
+        selectFeaturedProject(state),
+        selectFeaturedPromotion(state),
+        selectFeaturedSkill(state)
+    ]);
     return(
         <Row>
             {items.map((item,idx) => {

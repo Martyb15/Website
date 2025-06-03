@@ -1,8 +1,20 @@
 // file name is camelcase rather than pascel case cause it does not export a react component. 
 import { PROJECTS } from "../../app/shared/PROJECTS"
+import { createSlice } from "@reduxjs/toolkit";
 
-export const selectAllProjects = () => {
-    return PROJECTS; 
+const initialState = {
+    projectsArray: PROJECTS
+}
+
+const projectsSlice = createSlice({
+    name: 'projects',
+    initialState
+});
+
+export const projectsReducer = projectsSlice.reducer; 
+
+export const selectAllProjects = (state) => {
+    return state.projects.projectsArray; 
 };
 
 // export const selectRandomProject = () => {
@@ -10,10 +22,10 @@ export const selectAllProjects = () => {
 
 // };
 
-export const selectProjectById = (id) => {
-    return PROJECTS.find((project) => project.id === parseInt(id));
+export const selectProjectById = (id) => (state) => {
+    return state.projects.projectsArray.find((project) => project.id === parseInt(id));
 }
 
-export const selectFeaturedProject = () => {
-    return PROJECTS.find((project) => project.featured);
+export const selectFeaturedProject = (state) => {
+    return state.projects.projectsArray.find((project) => project.featured);
 }

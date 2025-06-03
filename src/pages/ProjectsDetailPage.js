@@ -4,10 +4,11 @@ import { selectProjectById } from "../features/projects/projectsSlice";
 import ProjectDetail from "../features/projects/ProjectDetail";
 import CommentsList from '../features/comments/CommentsList';
 import SubHeader from '../components/SubHeader';
+import { useSelector } from "react-redux";
 
 const ProjectDetailPage = () => {
     const { projectId } = useParams()
-    const project = selectProjectById(projectId);
+    const project = useSelector(selectProjectById(projectId));
 
     return(
         <Container>

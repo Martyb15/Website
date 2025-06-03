@@ -2,9 +2,10 @@
 import ProjectCard from "./ProjectCard"
 import { Col, Row } from "reactstrap";
 import { selectAllProjects } from "./projectsSlice";
+import { useSelector } from "react-redux";
 
-const ProjectsList = ( { setProjectId } ) => {
-    const projects = selectAllProjects();  
+const ProjectsList = () => {
+    const projects = useSelector(selectAllProjects);  
 
     return(
             <Row className="ms-auto"> 
