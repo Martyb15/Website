@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import ProjectLogo from "../app/assets/img/logo.png";
 import { NavLink } from "react-router-dom";
+import UserLoginForm from "../features/user/UserLoginForm";
 
 // Add some custom CSS in your stylesheet (e.g., Header.css or index.css)
 import '../Header.css';
@@ -48,6 +49,7 @@ const Header = () => {
             </NavLink>
           </NavItem>
         </Nav>
+        <UserLoginForm />
     </Collapse>
     </Navbar>
   );
