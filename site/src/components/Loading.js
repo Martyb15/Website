@@ -1,12 +1,12 @@
-import { Col } from 'reactstrap';
+import { Col, Spinner } from 'reactstrap';
 
 const Loading = () => {
 
     return(
-        <Col>
-            <i className='fa fa-spinner fa-pulse fa-3x fa-fw text-primary'/>
-            <p>Loading...</p>
-        </Col>
+        <Col className="text-center my-5">
+      <Spinner color="primary" style={{ width: '3rem', height: '3rem' }} />
+      <p className="mt-2">Loading...</p>
+    </Col>
     )
 };
 

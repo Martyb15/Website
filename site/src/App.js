@@ -12,13 +12,14 @@ import { useSelector } from 'react-redux';          // ALSO PART OF TEST
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchProjects } from './features/projects/projectsSlice.js';
+import { fetchSkills } from './features/skills/skillsSlice.js';
 
 function App() {
-
   const dispatch = useDispatch(); 
 
   useEffect( () => {
     dispatch(fetchProjects()); 
+    dispatch(fetchSkills()); 
   }, [dispatch]);
 
 
@@ -31,11 +32,11 @@ function App() {
        <Header />
 
         <Routes> 
-          <Route path="/" element={<HomePage />}/>
-          <Route path="contact" element={<ContactPage />}/>
-          <Route path="directory" element={<ProjectsDirectoryPage />} />
-          <Route path='directory/:projectId' element={<ProjectDetailPage />} />
-          <Route path='about' element={<AboutPage />} />
+          <Route path="/"                    element={<HomePage              />}/>
+          <Route path="contact"              element={<ContactPage           />}/>
+          <Route path="directory"            element={<ProjectsDirectoryPage />} />
+          <Route path='directory/:projectId' element={<ProjectDetailPage     />} />
+          <Route path='about'                element={<AboutPage             />} />
         </Routes>
 
         <Footer /> 

@@ -130,6 +130,63 @@
 
 
 
+/* src/features/skills/Skill.css */
+
+/* 1) The outer card: center its contents, give some breathing room */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 18rem;      /* optional: limit overall width */
+  margin: 0 auto;        /* center if its parent is wider */
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* 2) Square wrapper: height always equals width */
+.skill-image-wrapper {
+  width: 150px;          /* or 100% if you want it fluid up to a max */
+  padding-top: 150px;    /* this forces a 1:1 aspect ratio */
+  position: relative;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* 3) Actual image: fill wrapper but keep its own aspect ratio */
+.skill-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* key! prevents stretching, centers the logo */
+}
+
+/* 4) Text content styling */
+.skill-content {
+  text-align: center;
+}
+
+.skill-desc {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
