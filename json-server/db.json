@@ -2,41 +2,41 @@
   "projects": [
     {
       "id": 0,
-      "name": "React Lake Campground",
-      "image": "images/react-lake.jpg",
+      "name": "Vigenere Cipher",
+      "image": "images/vigenere-cipher.jpg",
       "elevation": 1233,
       "featured": false,
-      "description": "Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers."
+      "description": "Keep things secret with a vigenere cipher"
     },
     {
       "id": 1,
-      "name": "Chrome River Campground",
-      "image": "images/chrome-river.jpg",
+      "name": "Malware Analysis Sandbox",
+      "image": "images/malware-analysis.jpg",
       "elevation": 877,
       "featured": false,
-      "description": "Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River."
+      "description": "Suspicious file? Make sure it's safe and not malicious."
     },
     {
       "id": 2,
-      "name": "Breadcrumb Trail Campground",
-      "image": "images/breadcrumb-trail.jpg",
+      "name": "Backup automation project",
+      "image": "images/automated-backup.jpg",
       "elevation": 2901,
       "featured": false,
       "description": "Let NuCamp be your guide to this off-the-beaten-path, hike-in-only campground."
     },
     {
       "id": 3,
-      "name": "Redux Woods Campground",
-      "image": "images/redux-woods.jpg",
+      "name": "Hackazon",
+      "image": "images/hackazon.jpg",
       "elevation": 42,
       "featured": true,
-      "description": "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
+      "description": "Test penetration testing skills with Hackazon."
     }
   ],
   "comments": [
     {
       "id": 0,
-      "campsiteId": 0,
+      "projectId": 0,
       "rating": 5,
       "text": "The grass was indeed greener here than our last campsite.",
       "author": "Simon Hunt",
@@ -44,7 +44,7 @@
     },
     {
       "id": 1,
-      "campsiteId": 0,
+      "projectId": 0,
       "rating": 3,
       "text": "This lone monkey kept following us back to our tent.",
       "author": "Zandra Katherine",
@@ -52,7 +52,7 @@
     },
     {
       "id": 2,
-      "campsiteId": 0,
+      "projectId": 0,
       "rating": 4,
       "text": "Do not feed the wildlife. They will follow you back to the tent.",
       "author": "Amy Keophilavong",
@@ -60,7 +60,7 @@
     },
     {
       "id": 3,
-      "campsiteId": 0,
+      "projectId": 0,
       "rating": 3,
       "text": "Avoid Sundays; couldn't relax and play my flute with all the noisy kids.",
       "author": "Jean Luc",
@@ -68,7 +68,7 @@
     },
     {
       "id": 4,
-      "campsiteId": 0,
+      "projectId": 0,
       "rating": 5,
       "text": "This has been our favorite campsite for over 7 years. It is an absolutely beautiful site. The hosts are very friendly and helpful. Don't forget to try out the lake.",
       "author": "R. E. Osariemen",
@@ -76,7 +76,7 @@
     },
     {
       "id": 5,
-      "campsiteId": 1,
+      "projectId": 1,
       "rating": 4,
       "text": "There's nothing more fun than setting up a tent in a rainstorm.",
       "author": "Juan Cortez",
@@ -84,7 +84,7 @@
     },
     {
       "id": 6,
-      "campsiteId": 1,
+      "projectId": 1,
       "rating": 5,
       "text": "I caught a world-record-breaking trout here on my last visit.",
       "author": "McKenzie Sebastian",
@@ -92,7 +92,7 @@
     },
     {
       "id": 7,
-      "campsiteId": 1,
+      "projectId": 1,
       "rating": 5,
       "text": "The campground was beautiful, but the bugs could bite sometimes.",
       "author": "Brennen Ech",
@@ -100,7 +100,7 @@
     },
     {
       "id": 8,
-      "campsiteId": 1,
+      "projectId": 1,
       "rating": 4,
       "text": "Love the river but I didn't catch any fish.",
       "author": "Amy Keophilavong",
@@ -108,7 +108,7 @@
     },
     {
       "id": 9,
-      "campsiteId": 1,
+      "projectId": 1,
       "rating": 5,
       "text": "A wonderful place to reconnect with nature.",
       "author": "Jordan Runn",
@@ -116,7 +116,7 @@
     },
     {
       "id": 10,
-      "campsiteId": 2,
+      "projectId": 2,
       "rating": 5,
       "text": "The Frozen Tundra is great place for family and friends camping!",
       "author": "Olaf the Snowman",
@@ -124,7 +124,7 @@
     },
     {
       "id": 11,
-      "campsiteId": 2,
+      "projectId": 2,
       "rating": 1,
       "text": "We had to leave about 2am to go back to the city because the quiet was just too much!",
       "author": "Vincent and Mona Lisa Gambini",
@@ -132,7 +132,7 @@
     },
     {
       "id": 12,
-      "campsiteId": 2,
+      "projectId": 2,
       "rating": 5,
       "text": "The stars at night were a revelation!",
       "author": "Ann Dabramov",
@@ -140,7 +140,7 @@
     },
     {
       "id": 13,
-      "campsiteId": 2,
+      "projectId": 2,
       "rating": 4,
       "text": "Great scenic hiking trails but it was challenging to go up the mountain.",
       "author": "Amy Keophilavong",
@@ -148,7 +148,7 @@
     },
     {
       "id": 14,
-      "campsiteId": 2,
+      "projectId": 2,
       "rating": 5,
       "text": "Perfect scenery for a smoked kipper breakfast with friends!",
       "author": "Dave Lister",
@@ -156,7 +156,7 @@
     },
     {
       "id": 15,
-      "campsiteId": 3,
+      "projectId": 3,
       "rating": 4,
       "text": "Just remember a bear can run and climb faster than you...",
       "author": "Markell Richards",
@@ -164,7 +164,7 @@
     },
     {
       "id": 16,
-      "campsiteId": 3,
+      "projectId": 3,
       "rating": 5,
       "text": "Excellent site to recharge from the city.",
       "author": "Amy Keophilavong",
@@ -172,7 +172,7 @@
     },
     {
       "id": 17,
-      "campsiteId": 3,
+      "projectId": 3,
       "rating": 5,
       "text": "What a magnificent view!",
       "author": "Tinus Lorvaldes",
@@ -180,7 +180,7 @@
     },
     {
       "id": 18,
-      "campsiteId": 3,
+      "projectId": 3,
       "rating": 4,
       "text": "The sites are huge! We felt like we were in the middle of nowhere, in a good way.",
       "author": "Chloe Haskins",
@@ -188,11 +188,83 @@
     },
     {
       "id": 19,
-      "campsiteId": 3,
+      "projectId": 3,
       "rating": 5,
       "text": "The photos don't do justice to the beauty of this place.",
       "author": "Minae Lee",
       "date": "2019-02-18T18:12Z"
+    },
+    {
+      "projectId": 1,
+      "rating": 5,
+      "text": "Hello this is a great project",
+      "author": "Martin",
+      "date": "2025-06-08T08:57:04.187Z",
+      "id": 20
+    },
+    {
+      "projectId": 1,
+      "rating": 4,
+      "text": "wow awsome",
+      "author": "sdfs",
+      "date": "2025-06-08T08:58:30.668Z",
+      "id": 21
+    },
+    {
+      "projectId": 1,
+      "rating": 3,
+      "text": "love",
+      "author": "lsjfd",
+      "date": "2025-06-08T09:01:55.683Z",
+      "id": 22
+    },
+    {
+      "projectId": 0,
+      "rating": 4,
+      "text": "HEYYYYYYY!!! Very cool ",
+      "author": "marb",
+      "date": "2025-06-08T09:19:33.299Z",
+      "id": 23
+    },
+    {
+      "projectId": 0,
+      "rating": 5,
+      "text": "asfhaksfhla jdslf",
+      "author": "NOT YOU ",
+      "date": "2025-06-08T09:25:33.455Z",
+      "id": 24
+    },
+    {
+      "projectId": 2,
+      "rating": 4,
+      "text": "SWEEEEET",
+      "author": "y fox",
+      "date": "2025-06-08T09:26:52.065Z",
+      "id": 25
+    },
+    {
+      "projectId": 3,
+      "rating": 1,
+      "text": "lkhfsdkh",
+      "author": "aksjfd",
+      "date": "2025-06-08T09:27:17.392Z",
+      "id": 26
+    },
+    {
+      "projectId": 3,
+      "rating": 2,
+      "text": "safsadf",
+      "author": "asfdd",
+      "date": "2025-06-08T09:34:12.725Z",
+      "id": 27
+    },
+    {
+      "projectId": 3,
+      "rating": 5,
+      "text": "sfsa",
+      "author": "adfs",
+      "date": "2025-06-08T09:34:27.455Z",
+      "id": 28
     }
   ],
   "skills": [
@@ -225,34 +297,34 @@
       "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
     }
   ],
-  "promotions": [
+  "certifications": [
     {
       "id": 0,
-      "name": "Mountain Adventure",
-      "image": "images/breadcrumb-trail.jpg",
+      "name": "B.S. in Computer Science (Cybersecurity)",
+      "image": "images/liberty.jpg",
       "featured": true,
-      "description": "Book a 5-day mountain trek with a seasoned outdoor guide! Fly fishing equipment and lessons provided."
+      "description": "Liberty University, May 2025 — GPA 3.8"
     },
     {
       "id": 1,
-      "name": "Into The Weeds",
-      "image": "images/weeds.jpg",
+      "name": "Nucamp Full-Stack Web Development Bootcamp",
+      "image": "images/nucamp-logo.png",
       "featured": false,
-      "description": "5 days deep in the Redux National Monument, far from the beaten path, with only a reducer in your backpack.  Guide provided."
+      "description": "Completed July 2024 — Built full-stack apps with React, Node, Express & MongoDB"
     },
     {
       "id": 2,
-      "name": "Bootstrap Teardown",
-      "image": "images/boots.jpg",
+      "name": "CompTIA Network+",
+      "image": "images/network-plus.png",
       "featured": false,
-      "description": "In this weekend workshop we'll rebuild your bootstraps from scratch, so you're ready for next-level excursions."
+      "description": "In progress — exam expected July 2025"
     },
     {
       "id": 3,
-      "name": "Asynchronous Rendezvous",
-      "image": "images/promise-mountain.jpg",
+      "name": "CompTIA Security+",
+      "image": "images/security-plus.png",
       "featured": false,
-      "description": "Meet up with your guide at the top of Promise Mountain.  Or, try to.  Good luck!"
+      "description": "Planned for Q4 2025"
     }
   ],
   "feedback": [

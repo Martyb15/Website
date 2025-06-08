@@ -1,8 +1,8 @@
 // file name is camelcase rather than pascel case cause it does not export a react component. 
 // import { PROJECTS } from "../../app/shared/PROJECTS"
 import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
-import { baseURL } from "../../app/shared/baseUrl";
-import { mapImageUrl } from "../../utils/mapImageURL";
+import { baseUrl } from "../../app/shared/baseUrl";
+import { mapImageUrl } from "../../utils/mapImageUrl";
 
 const initialState = {
     projectsArray: [],
@@ -14,7 +14,7 @@ const initialState = {
 export const fetchProjects = createAsyncThunk(
     'projects/fetchProjects',
     async () => {
-        const response = await fetch(baseURL + 'projects');
+        const response = await fetch(baseUrl + 'projects');
         if (!response.ok) {
             return Promise.reject('Unable to fetch status : ' + response.status); 
         }
@@ -59,5 +59,9 @@ export const selectProjectById = (id) => (state) => {
 }
 
 export const selectFeaturedProject = (state) => {
-    return state.projects.projectsArray.find((project) => project.featured);
+    return {
+        featuredItem: state.projects.projectsArray.find((project) => project.featured),
+        isLoading: state.projects.isLoading,
+        errMsg: state.projects.errMsg
+    }
 }

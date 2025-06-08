@@ -13,6 +13,8 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchProjects } from './features/projects/projectsSlice.js';
 import { fetchSkills } from './features/skills/skillsSlice.js';
+import { fetchCertification } from './features/certifications/certificationsSlice.js';
+import { fetchComments } from './features/comments/commentsSlice.js';
 
 function App() {
   const dispatch = useDispatch(); 
@@ -20,6 +22,8 @@ function App() {
   useEffect( () => {
     dispatch(fetchProjects()); 
     dispatch(fetchSkills()); 
+    dispatch(fetchCertification());
+    dispatch(fetchComments())
   }, [dispatch]);
 
 
@@ -28,19 +32,26 @@ function App() {
 
 
   return (
-    <div className="App">
-       <Header />
+<div className="d-flex flex-column min-vh-100">
+      <Header />
 
-        <Routes> 
-          <Route path="/"                    element={<HomePage              />}/>
+      {/* flex-fill makes <main> grow to push Footer down  */
+      /* container keeps your Bootstrap padding           */}
+      <main className="flex-fill container">
+        <Routes>
+        <Route path="/"                    element={<HomePage              />}/>
           <Route path="contact"              element={<ContactPage           />}/>
           <Route path="directory"            element={<ProjectsDirectoryPage />} />
           <Route path='directory/:projectId' element={<ProjectDetailPage     />} />
           <Route path='about'                element={<AboutPage             />} />
         </Routes>
+      </main>
 
-        <Footer /> 
+      <Footer />
     </div>
+
+
+    
   );
 }
 

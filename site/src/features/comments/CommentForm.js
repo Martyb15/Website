@@ -4,6 +4,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { validateCommentForm } from "../../utils/validateCommentForm";
 import { useDispatch } from "react-redux";
 import { addComment } from "./commentsSlice";
+import { postComment } from './commentsSlice';
 
 
 const CommentForm = ({projectId}) => {
@@ -25,7 +26,7 @@ const CommentForm = ({projectId}) => {
         };
 
         console.log(comment);
-        dispatch(addComment(comment));
+        dispatch(postComment(comment));
         setModalOpen(false);
     }
 

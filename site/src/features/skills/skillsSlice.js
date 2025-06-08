@@ -1,12 +1,12 @@
 // import { SKILLS } from "../../app/shared/oldData/SKILLS";
 import { createSlice, createAsyncThunk} from '@reduxjs/toolkit'; 
-import { baseURL } from '../../app/shared/baseUrl';
-import { mapImageUrl } from '../../utils/mapImageURL';
+import { baseUrl } from '../../app/shared/baseUrl';
+import { mapImageUrl } from '../../utils/mapImageUrl';
 
 export const fetchSkills = createAsyncThunk(
     'skills/fetchSkills',
     async () => {
-        const response = await fetch(baseURL + 'skills');
+        const response = await fetch(baseUrl + 'skills');
         if (!response.ok) {
             return Promise.reject('Unable to fetch, status: ' + response.status);
         }
@@ -43,10 +43,14 @@ const skillsSlice = createSlice({
 
 export const skillsReducer = skillsSlice.reducer;
 
-export const selectFeaturedSkill = (state) => {
-    return state.skills.skillsArray.find((skill) => skill.featured);
-};
-
 export const selectAllSkills = (state) => {
     return state.skills.skillsArray;
+};
+
+export const selectFeaturedSkill = (state) => {
+    return {
+        featuredItem: state.skills.skillsArray.find((skill) => skill.featured),
+        isLoading: state.skills.isLoading,
+        errMsg: state.skills.errMsg 
+    };
 };

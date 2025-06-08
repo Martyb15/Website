@@ -13,6 +13,7 @@ import { NavLink } from "react-router-dom";
 import UserLoginForm from "../features/user/UserLoginForm";
 
 // Add some custom CSS in your stylesheet (e.g., Header.css or index.css)
+// comments style --- boxed / 'react-card' 
 import '../Header.css';
 
 const Header = () => {
@@ -25,6 +26,7 @@ const Header = () => {
         <img src={ProjectLogo} alt="Logo" className="logo-img" />
         <h1 className="ms-2 mb-0">Martin Barrios</h1>
       </NavbarBrand>
+
     <NavbarToggler navbar onClick={() => setMenuOpen(!menuOpen)} />
     <Collapse isOpen={menuOpen} navbar >
       <Nav className="ms-auto" navbar>

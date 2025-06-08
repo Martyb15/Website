@@ -38,7 +38,26 @@ const AboutPage = () => {
                     </Card>
                 </Col>
 
-                <Col> 
+                
+
+               
+            </Row>
+
+
+
+            <Row className='row-content'>
+                <Col className="col-12">
+                    <h3 >Skills</h3>
+                </Col>
+                <Col className="col-12">
+                    <SkillsList />
+                </Col>
+            </Row>
+
+
+
+            <Row className='row-content' > 
+            <Col> 
                     <Card className='bg-light mt-3'>
                         <CardBody >
                             <blockquote className='blockquote'>
@@ -55,19 +74,6 @@ const AboutPage = () => {
                             </blockquote>
                         </CardBody>
                     </Card>
-                </Col>
-
-               
-            </Row>
-
-
-
-            <Row className='row-content'>
-                <Col className="col-12">
-                    <h3 >Skills</h3>
-                </Col>
-                <Col className="col-12">
-                    <SkillsList />
                 </Col>
             </Row>
         </Container>
