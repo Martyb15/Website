@@ -1,44 +1,36 @@
-import { Col } from "reactstrap";
+import { Col } from 'reactstrap';
 import Comment from './Comment';
-import { selectCommentsByProjectId } from "./commentsSlice";
-import CommentForm from "./CommentForm";
-import { useSelector } from "react-redux";
+import CommentForm from './CommentForm';
+import { selectCommentsByProjectId } from './commentsSlice';
+import { useSelector } from 'react-redux';
 import Error from '../../components/Error';
 import Loading from '../../components/Loading';
 
-
-
 const CommentsList = ({ projectId }) => {
-    const { isLoading, errMsg } = useSelector((state) => state.comments);
-    // const { commentsArray, isLoading, errMsg } = useSelector(
-    //     (state) => state.comments
-    // ); 
-    // const comments = selectCommentsByProjectId(projectId)({ comments: { commentsArray } });
+  const { isLoading, errMsg } = useSelector((state) => state.comments);
+  const comments = useSelector(selectCommentsByProjectId(projectId));
 
-    const comments = useSelector(selectCommentsByProjectId(projectId));
-    if (isLoading) return <Loading /> 
-    if (errMsg) return <Error errMsg={errMsg} />
+  if (isLoading)  return <Loading />;
+  if (errMsg)     return <Error errMsg={errMsg} />;
 
-    if (comments && comments.length > 0) {
-        console.log(comments)
-        console.log('comments')
-        return (
-            <Col md='5' className='m-1'>
-                <h4>Comments</h4>
-                {comments.map((comment) => {
-                    return <Comment key={comment.id} comment={comment} />;
-                })}
-                <CommentForm projectId={projectId}></CommentForm>
-            </Col>
+  return (
+    <Col md="5" className="m-1">
+      <h4>Comments</h4>
 
-        );
-    }
-    return (
-        <Col md='5' className='m-1'>
-            There are no comments for this campsite yet.
-        </Col>
-    
-    );
+      {/* show a message when the list is empty */}
+      {comments.length === 0 && (
+        <p className="text-muted">There are no comments for this project yet.</p>
+      )}
+
+      {/* render any existing comments */}
+      {comments.map((c) => (
+        <Comment key={c.id} comment={c} />
+      ))}
+
+      {/* always show the form/button */}
+      <CommentForm projectId={projectId} />
+    </Col>
+  );
 };
 
 export default CommentsList;
