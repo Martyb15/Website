@@ -61,54 +61,95 @@
   ],
   "skills": [
     {
-      "id": 0,
+      "id": 1,
+      "name": "Python",
+      "image": "images/python.png",
+      "featured": false,
+      "description": "Three years experience teaching Python. Primary scripting language for malware-analysis sandbox (Flask + VirusTotal API) and Kaggle dataset ETL; experienced with asyncio, Pandas, and type-hinting."
+    },
+    {
+    "id": 2,
+    "name": "C / C++",
+    "image": "images/c.png",
+    "featured": false,
+    "description": "Wrote cryptography labs (RSA, MD5-collision) and a CLI banking app that connects to SQL Server via ODBC; comfortable with pointers, memory management, and makefiles."
+    },
+    {
+      "id": 3,
+      "name": "Git & GitHub",
+      "image": "images/git-logo.png",
+      "featured": false,
+      "description": "Version-controlled projects (React site, malware sandbox, vigenere cipher) using Git flow and pull requests on GitHub; comfortable rebasing, resolving complex merge conflicts, and automating CI."
+    },
+    {
+      "id": 5,
+      "name": "Node.js & Express",
+      "image": "images/node-logo.png",
+      "featured": true,
+      "description": "Developed RESTful back-ends and a JSON-server mock API for Hackazon penetration-testing labs; implemented JWT auth, rate-limiting, and logging with Morgan and Winston."
+    },
+    {
+      "id": 6,
+      "name": "Docker",
+      "image": "images/docker1.png",
+      "featured": false,
+      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
+    },
+    {
+      "id": 7,
+      "name": "Burp Suite",
+      "image": "images/burp-suite.png",
+      "featured": false,
+      "description": "Performed dynamic scans on the Hackazon e-commerce app, scripted Intruder attacks, and wrote custom BApp extensions to validate token misconfiguration findings."
+    },
+    {
+      "id": 8,
+      "name": "React + Redux",
+      "image": "images/react.png",
+      "featured": false,
+      "description": "Built this portfolio and a multi-user code-editor prototype with React hooks and Redux Toolkit; optimized slices, lazy-loaded routes, and wrote custom middleware for API status handling."
+    },
+    {
+      "id": 9,
+      "name": "Sqlmap",
+      "image": "images/sqlmap.png",
+      "featured": false,
+      "description": "Automated detection/ exploitation of SQLi in Hackazon's mobile API; exported PoCs."
+    },
+    {
+      "id": 10,
       "name": "Bootstrap",
       "image": "images/bootstrap-logo.png",
       "featured": false,
       "description": "Bootstrap Outfitters supplies you with the gear you need at prices you can't beat."
     },
     {
-      "id": 1,
-      "name": "Git",
-      "image": "images/git-logo.png",
+      "id": 11,
+      "name": "Network & Security Tools",
+      "image": "images/network-tools.png",
       "featured": false,
-      "description": "Join Git Out Expeditions to explore new horizons with a group of other adventurers!"
+      "description": "Daily driver: Nmap, Netdiscover, Wireshark, and OpenSSL for enumeration and packet analysis; studying toward CompTIA Network+ and Security+ certifications."
     },
     {
-      "id": 2,
-      "name": "Mongo",
-      "image": "images/mongo-logo.png",
+      "id": 12,
+      "name": "SQL",
+      "image": "images/sql.png",        
       "featured": false,
-      "description": "Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop."
+      "description": "Write complex queries, joins, and window functions in MySQL and SQL Server; designed normalized schemas and tuned indexes for a Flask-based malware-analysis dashboard."
     },
     {
-      "id": 3,
-      "name": "Node",
-      "image": "images/node-logo.png",
-      "featured": true,
-      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
+      "id": 13,
+      "name": "Linux",
+      "image": "images/linux.png",
+      "featured": false,
+      "description": "Daily driver for cybersecurity labs: configure Ubuntu/Kali boxes, automate tasks with Bash, manage services with systemd, and harden servers using iptables and Fail2Ban."
     },
     {
-      "id": 4,
-      "name": "Docker",
-      "image": "images/docker1.png",
-      "featured": true,
-      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
-    },
-    {
-      "id": 5,
-      "name": "Burp Suite",
-      "image": "images/burp-suite.png",
-      "featured": true,
-      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
-    },
-    {
-      "id": 6,
-      "name": "Sqlmap",
-      "image": "images/sqlmap.png",
-      "featured": true,
-      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
-    }
+      "id": 14,
+      "name": "PowerShell",
+      "image": "images/powershell.png",
+      "featured": false,
+      "description": "Authored scripts for a two-tier Windows backup: weekly full mirrors with Copy-Item and daily incrementals via Robocopy, all scheduled and logged automatically."    }
   ],
   "certifications": [
     {
