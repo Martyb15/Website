@@ -26,6 +26,10 @@ const AboutPage = () => {
                                 <dd className='col-6'>Yorba Linda, California</dd>
                                 <dt className='col-6'>Graduated</dt>
                                 <dd className='col-6'>March 2025</dd>
+                                <dt className='col-6'>Github</dt>
+                                <dd className='col-6'>https://github.com/Martyb15</dd>
+                                <dt className='col-6'>Interests</dt>
+                                <dd className='col-6'>Web Development, Pen Testing, Cryptography, Blockchain</dd>
                             </dl>
                         </CardBody>
                     </Card>
