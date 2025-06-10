@@ -1,7 +1,7 @@
 // import { SKILLS } from "../../app/shared/oldData/SKILLS";
 import { createSlice, createAsyncThunk} from '@reduxjs/toolkit'; 
 import { baseUrl } from '../../app/shared/baseUrl';
-import { mapImageUrl } from '../../utils/mapImageUrl';
+import { mapImageUrl } from "../../utils/mapImageUrl";
 
 export const fetchSkills = createAsyncThunk(
     'skills/fetchSkills',

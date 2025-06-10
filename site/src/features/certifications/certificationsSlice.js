@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { baseUrl } from "../../app/shared/baseUrl";
 import { mapImageUrl } from "../../utils/mapImageUrl";
-import { a } from "react-spring";
+
 
 export const fetchCertification = createAsyncThunk (
     'certifications/fetchCertification',
