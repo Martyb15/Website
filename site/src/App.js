@@ -27,8 +27,8 @@ function App() {
   }, [dispatch]);
 
 
-  const wholeStore = useSelector(state => state);   // 1️⃣ read everything         PART OF TEST
-  console.log('Store contents:', wholeStore);       // 2️⃣ should log an object    PART OF TEST
+  const wholeStore = useSelector(state => state);   //  read everything         PART OF TEST
+  console.log('Store contents:', wholeStore);       //  should log an object    PART OF TEST
 
 
   return (
