@@ -22,7 +22,7 @@
       "image": "images/automated-backup.jpg",
       "techStack": ["PowerShell"],
       "featured": false,
-      "description": "Let NuCamp be your guide to this off-the-beaten-path, hike-in-only campground."
+      "description": "Automated backup solution for Windows Server to ensure data integrity and disaster recovery. Full and incremental backup scripts using PowerShell, leveraging Copy-Item for complete data replication and Robocopy for efficient incremental updates."
     },
     {
       "id": 3,
