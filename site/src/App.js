@@ -8,7 +8,7 @@ import HomePage from './pages/HomePage.js';
 import ContactPage from './pages/ContactPage.js';
 import ProjectDetailPage from './pages/ProjectsDetailPage.js'; 
 import AboutPage from './pages/AboutPage.js';
-import { useSelector } from 'react-redux';          // ALSO PART OF TEST
+import { useSelector } from 'react-redux';    
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchProjects } from './features/projects/projectsSlice.js';
@@ -27,16 +27,15 @@ function App() {
   }, [dispatch]);
 
 
-  const wholeStore = useSelector(state => state);   //  read everything         PART OF TEST
-  console.log('Store contents:', wholeStore);       //  should log an object    PART OF TEST
+  const wholeStore = useSelector(state => state);   
+  console.log('Store contents:', wholeStore);       
 
 
   return (
 <div className="d-flex flex-column min-vh-100">
       <Header />
 
-      {/* flex-fill makes <main> grow to push Footer down  */
-      /* container keeps your Bootstrap padding           */}
+      
       <main className="flex-fill container">
         <Routes>
         <Route path="/"                    element={<HomePage              />}/>
