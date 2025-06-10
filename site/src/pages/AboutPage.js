@@ -10,11 +10,8 @@ const AboutPage = () => {
 
                 <Col sm='6'>
                     <h3>My Mission</h3>
-                    <p>Highly motivated computer science graduate seeking an entry-level cybersecurity position. Eager to leverage                  
-                        my solid foundation in cybersecurity principles, practical experience with penetration testing tools
-                        (Metasploit, BurpSuite), and risk assessment methodologies to proactively secure digital assets and respond 
-                        eﬀectively to security threats. Proven ability to work collaboratively in dynamic team environments, driven 
-                        by continuous learning and a passion for protecting organizational integrity.
+                    <p>
+        To leverage my passion for secure, data-driven innovation by building reliable software and robust security solutions that empower organizations and users alike. I’m committed to continuous learning—experimenting with new tools, frameworks, and techniques—to stay ahead of emerging threats and industry best practices. My goal is to collaborate across product, design, and engineering teams to deliver high-impact features, foster trust through transparent communication, and help create digital experiences that are both cutting-edge and secure.
                     </p>
                 </Col>
 
@@ -25,14 +22,10 @@ const AboutPage = () => {
                         </CardHeader>
                         <CardBody>
                             <dl className='row'>
-                                <dt className='col-6'>Born</dt>
-                                <dd className='col-6'>December 15, 1996</dd>
-                                <dt className='col-6'>Something</dt>
-                                <dd className='col-6'>value</dd>
-                                <dt className='col-6'>No. of Reviews in 2019</dt>
-                                <dd className='col-6'>4388</dd>
-                                <dt className='col-6'>bugs killed</dt>
-                                <dd className='col-6'>42</dd>
+                                <dt className='col-6'>Resides in:</dt>
+                                <dd className='col-6'>Yorba Linda, California</dd>
+                                <dt className='col-6'>Graduated</dt>
+                                <dd className='col-6'>March 2025</dd>
                             </dl>
                         </CardBody>
                     </Card>
