@@ -2,61 +2,77 @@
   "projects": [
     {
       "id": 0,
-      "name": "Vigenere Cipher",
+      "name": "Vigenère Cipher CLI",
       "image": "images/vigenere-cipher.jpg",
       "techStack": ["C++"],
       "featured": false,
-      "description": "Keep things secret with a vigenere cipher"
+      "description": "C++ command-line tool to encrypt and decrypt text with the Vigenère cipher, including basic input validation and file-based workflows for learning classical cryptography."
     },
     {
       "id": 1,
       "name": "Malware Analysis Sandbox",
       "image": "images/malware-analysis.jpg",
-      "techStack": ["Flask", "Python"],
+      "techStack": ["Python", "Flask"],
       "featured": false,
-      "description": "Suspicious file? Make sure it's safe and not malicious."
+      "description": "Flask-based malware sandbox that lets users upload files, calculates hashes, and submits them to external scanning services, providing a safe environment to practice triaging suspicious samples."
     },
     {
       "id": 2,
-      "name": "Backup automation project",
+      "name": "Windows Backup Automation",
       "image": "images/automated-backup.jpg",
       "techStack": ["PowerShell"],
       "featured": false,
-      "description": "Automated backup solution for Windows Server to ensure data integrity and disaster recovery. Full and incremental backup scripts using PowerShell, leveraging Copy-Item for complete data replication and Robocopy for efficient incremental updates."
+      "description": "Automated backup solution for Windows machines: weekly full mirrors with Copy-Item and daily incrementals via Robocopy, scheduled with Task Scheduler and logged for quick verification."
     },
     {
       "id": 3,
-      "name": "Hackazon",
+      "name": "Hackazon Security Assessment",
       "image": "images/hackazon.jpg",
-      "techStack": ["Burp Suite", "mySQL", "Php"],
+      "techStack": ["Docker", "Burp Suite", "sqlmap", "PHP", "MySQL"],
       "featured": true,
-      "description": "Test penetration testing skills with Hackazon."
+      "description": "End-to-end security assessment of the intentionally vulnerable Hackazon e-commerce platform. Deployed the app with Docker, ran authenticated Burp Suite scans, verified XSS and SQL injection manually (and with sqlmap), and documented findings and mitigations as part of a capstone project."
+    },
+    {
+      "id": 4,
+      "name": "Python Blockchain Ledger",
+      "image": "images/blockchain-ledger.jpg",
+      "techStack": ["Python", "FastAPI", "WebSockets", "Docker"],
+      "featured": false,
+      "description": "Educational blockchain implementation with signed transactions, balance tracking, basic staking and slashing logic, and block validation. Exposed through a FastAPI REST API and a WebSocket peer-to-peer layer for experimenting with consensus behavior."
+    },
+    {
+      "id": 5,
+      "name": "Portfolio Website",
+      "image": "images/portfolio-site.jpg",
+      "techStack": ["React", "Redux Toolkit", "Bootstrap", "JSON Server"],
+      "featured": false,
+      "description": "This portfolio site: a React + Redux SPA backed by a JSON-server API. Uses async thunks to fetch projects, skills, certifications, and comments, with reusable components, routing, and a contact form wired into a feedback endpoint."
     }
   ],
   "comments": [
     {
       "id": 0,
-      "projectId": 0,
+      "projectId": 3,
       "rating": 5,
-      "text": "Very cool!",
-      "author": "Jane Hunt",
-      "date": "2025-10-25T16:30Z"
+      "text": "Thorough Hackazon write-up. Good mix of automated scanning and manual verification of findings.",
+      "author": "Security Lab Instructor",
+      "date": "2025-11-10T16:30:00.000Z"
     },
     {
       "id": 1,
-      "projectId": 0,
-      "rating": 3,
-      "text": "Thanks for sharing!",
-      "author": "Zandra Katherine",
-      "date": "2025-06-17T03:33Z"
+      "projectId": 1,
+      "rating": 4,
+      "text": "Malware sandbox UI is clean and straightforward. Nice starting point for practicing basic triage.",
+      "author": "Peer Reviewer",
+      "date": "2025-11-05T03:33:00.000Z"
     },
     {
-      "projectId": 3,
+      "id": 2,
+      "projectId": 2,
       "rating": 5,
-      "text": "sfsa",
-      "author": "adfs",
-      "date": "2025-06-08T09:34:27.455Z",
-      "id": 28
+      "text": "PowerShell backup scripts work reliably and the logging makes it easy to confirm everything ran.",
+      "author": "Internal Project Mentor",
+      "date": "2025-10-20T09:34:27.455Z"
     }
   ],
   "skills": [
@@ -65,91 +81,92 @@
       "name": "Python",
       "image": "images/python.png",
       "featured": false,
-      "description": "Three years experience teaching Python. Primary scripting language for malware-analysis sandbox (Flask + VirusTotal API) and Kaggle dataset ETL; experienced with asyncio, Pandas, and type-hinting."
+      "description": "Primary language for scripting and back-end work. Built a Flask malware-analysis sandbox, an educational blockchain ledger (FastAPI + WebSockets), and multiple data-processing scripts using Pandas and type hints."
     },
     {
-    "id": 2,
-    "name": "C / C++",
-    "image": "images/c.png",
-    "featured": false,
-    "description": "Wrote cryptography labs (RSA, MD5-collision) and a CLI banking app that connects to SQL Server via ODBC; comfortable with pointers, memory management, and makefiles."
+      "id": 2,
+      "name": "C / C++",
+      "image": "images/c.png",
+      "featured": false,
+      "description": "Implemented cryptography-focused labs (RSA, MD5 collision, hash length extension) and a CLI banking app that talks to SQL Server via ODBC; comfortable with pointers, memory management, and basic build tooling."
     },
     {
       "id": 3,
       "name": "Git & GitHub",
       "image": "images/git-logo.png",
       "featured": false,
-      "description": "Version-controlled projects (React site, malware sandbox, vigenere cipher) using Git flow and pull requests on GitHub; comfortable rebasing, resolving complex merge conflicts, and automating CI."
+      "description": "Use Git daily across personal projects and coursework. Comfortable with branching, rebasing, resolving merge conflicts, and managing pull requests on GitHub for portfolio projects and labs."
     },
     {
       "id": 5,
       "name": "Node.js & Express",
       "image": "images/node-logo.png",
       "featured": true,
-      "description": "Developed RESTful back-ends and a JSON-server mock API for Hackazon penetration-testing labs; implemented JWT auth, rate-limiting, and logging with Morgan and Winston."
+      "description": "Built REST APIs with Express, including auth middleware, centralized error handling, and logging with Morgan. Used Express and JSON Server to mock back-ends while developing React front-ends."
     },
     {
       "id": 6,
       "name": "Docker",
       "image": "images/docker1.png",
       "featured": false,
-      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
+      "description": "Use Docker and docker-compose to spin up reproducible lab environments (Hackazon, databases, and Python services). Wrote basic Dockerfiles for Python apps and debugged container networking and volume issues."
     },
     {
       "id": 7,
       "name": "Burp Suite",
       "image": "images/burp-suite.png",
       "featured": false,
-      "description": "Performed dynamic scans on the Hackazon e-commerce app, scripted Intruder attacks, and wrote custom BApp extensions to validate token misconfiguration findings."
+      "description": "Used Burp Suite Professional to perform authenticated dynamic scans of Hackazon, tuned scan configurations, and used Repeater/Intruder for manual XSS and SQL injection testing with professional-style reports."
     },
     {
       "id": 8,
       "name": "React + Redux",
       "image": "images/react.png",
       "featured": false,
-      "description": "Built this portfolio and a multi-user code-editor prototype with React hooks and Redux Toolkit; optimized slices, lazy-loaded routes, and wrote custom middleware for API status handling."
+      "description": "Built this portfolio with React hooks, React Router, and Redux Toolkit slices for projects, skills, certifications, and comments. Implemented async thunks for API calls and loading/error UI states."
     },
     {
       "id": 9,
       "name": "Sqlmap",
       "image": "images/sqlmap.png",
       "featured": false,
-      "description": "Automated detection/ exploitation of SQLi in Hackazon's mobile API; exported PoCs."
+      "description": "Automated detection and exploitation of SQL injection in Hackazon’s API and back-end, using sqlmap to enumerate databases and generate proof-of-concept evidence where appropriate."
     },
     {
       "id": 10,
       "name": "Bootstrap",
       "image": "images/bootstrap-logo.png",
       "featured": false,
-      "description": "Bootstrap Outfitters supplies you with the gear you need at prices you can't beat."
+      "description": "Use Bootstrap and Reactstrap for quick, responsive layouts: navbars, cards, grids, and modals. Comfortable customizing spacing, typography, and theming instead of leaving everything at the defaults."
     },
     {
       "id": 11,
       "name": "Network & Security Tools",
       "image": "images/network-tools.png",
       "featured": false,
-      "description": "Daily driver: Nmap, Netdiscover, Wireshark, and OpenSSL for enumeration and packet analysis; studying toward CompTIA Network+ and Security+ certifications."
+      "description": "Hands-on with Nmap, Netdiscover, Wireshark, and OpenSSL for host discovery, port scanning, packet analysis, and TLS inspection. Regularly used in labs while studying for CompTIA Network+."
     },
     {
       "id": 12,
       "name": "SQL",
-      "image": "images/sql.png",        
+      "image": "images/sql.png",
       "featured": false,
-      "description": "Write complex queries, joins, and window functions in MySQL and SQL Server; designed normalized schemas and tuned indexes for a Flask-based malware-analysis dashboard."
+      "description": "Write multi-table joins, subqueries, and basic window functions in MySQL and SQL Server. Designed normalized schemas and tuned indexes for small lab projects."
     },
     {
       "id": 13,
       "name": "Linux",
       "image": "images/linux.png",
       "featured": false,
-      "description": "Daily driver for cybersecurity labs: configure Ubuntu/Kali boxes, automate tasks with Bash, manage services with systemd, and harden servers using iptables and Fail2Ban."
+      "description": "Comfortable in Ubuntu, Kali, and other distributions. Use Bash for automation, manage services with systemd, configure SSH and basic firewall rules, and troubleshoot networking and permissions issues."
     },
     {
       "id": 14,
       "name": "PowerShell",
       "image": "images/powershell.png",
       "featured": false,
-      "description": "Authored scripts for a two-tier Windows backup: weekly full mirrors with Copy-Item and daily incrementals via Robocopy, all scheduled and logged automatically."    }
+      "description": "Authored scripts for a two-tier Windows backup strategy: weekly full mirrors and daily incrementals using Copy-Item and Robocopy, all scheduled and logged automatically."
+    }
   ],
   "certifications": [
     {
@@ -157,40 +174,29 @@
       "name": "B.S. in Computer Science (Cybersecurity)",
       "image": "images/liberty.jpg",
       "featured": true,
-      "description": "Liberty University, May 2025"
+      "description": "Liberty University, May 2025 — Concentration in Cybersecurity; coursework included networking, cryptography, secure software development, and ethical hacking."
     },
     {
       "id": 1,
       "name": "Nucamp Full-Stack Web Development Bootcamp",
       "image": "images/nucamp-logo.png",
       "featured": false,
-      "description": "Completed July 2024 — Built full-stack apps with React, Node, Express & MongoDB"
+      "description": "Completed July 2024 — Built full-stack apps with React, Node, Express, and MongoDB, including authentication and RESTful APIs."
     },
     {
       "id": 2,
-      "name": "CompTIA Network+",
+      "name": "CompTIA Network+ (N10-008) — In Progress",
       "image": "images/network-plus.png",
       "featured": false,
-      "description": "In progress — exam expected July 2025"
+      "description": "Actively studying routing and switching, wireless, virtualization, and network security while applying concepts in home lab environments."
     },
     {
       "id": 3,
-      "name": "CompTIA Security+",
+      "name": "CompTIA Security+ — Planned",
       "image": "images/security-plus.png",
       "featured": false,
-      "description": "Planned for Q4 2025"
+      "description": "Planned next after Network+ to formalize knowledge of risk management, identity and access management, and secure network design."
     }
   ],
-  "feedback": [
-    {
-      "id": 0,
-      "firstname": "Test",
-      "lastname": "Test",
-      "phoneNum": "12345",
-      "email": "test@test.com",
-      "agree": true,
-      "contactType": "Email",
-      "feedback": "test"
-    }
-  ]
+  "feedback": []
 }
