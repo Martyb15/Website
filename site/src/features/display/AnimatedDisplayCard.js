@@ -6,6 +6,7 @@ const AnimatedDisplayCard = ({ item }) => {
     const { image, name, description } = item;
     const [toggle, setToggle] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const animatedStyle = useSpring({
         opacity: toggle ? 1 : 0,
@@ -18,6 +19,12 @@ const AnimatedDisplayCard = ({ item }) => {
         setToggle(true);
     }, []);
 
+    const toggleExpand = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsExpanded(!isExpanded);
+    };
+
     return (
         <animated.div
             style={animatedStyle}
@@ -28,7 +35,15 @@ const AnimatedDisplayCard = ({ item }) => {
                 <CardImg src={image} alt={name} />
                 <CardBody>
                     <CardTitle>{name}</CardTitle>
-                    <CardText>{description}</CardText>
+                    <CardText className={isExpanded ? 'expanded' : 'collapsed'}>
+                        {description}
+                    </CardText>
+                    <button 
+                        className="read-more-btn"
+                        onClick={toggleExpand}
+                    >
+                        {isExpanded ? '▲ Show less' : '▼ Read more'}
+                    </button>
                 </CardBody>
             </Card>
         </animated.div>
@@ -36,18 +51,3 @@ const AnimatedDisplayCard = ({ item }) => {
 };
 
 export default AnimatedDisplayCard;
-
-
-
-
-
-
-// const AnimatedDisplayCard = ({ item }) => {
-//     const {image, name, description} = item; 
-//     const [toggle, setToggle] = useState(false)
-
-//     const animatedStyle = useSpring({
-//         opacity: toggle ? 1 : 0, 
-//         transform: toggle ? 'scale(1,1)' : 'scale(1,0)',
-//         config: {duration: 500}
-//     })
