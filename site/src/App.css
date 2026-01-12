@@ -1,6 +1,3 @@
-/* ============================================
-   ENHANCED PORTFOLIO STYLING
-   ============================================ */
 
 /* === ROOT VARIABLES === */
 :root {
@@ -15,7 +12,6 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* === GLOBAL STYLES === */
@@ -24,6 +20,8 @@ body {
   color: var(--text-dark);
   background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
@@ -57,17 +55,11 @@ h3 { font-size: 1.5rem; }
   padding: 1rem 0;
   background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(10px);
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
-  transition: var(--transition);
-}
-
-.navbar-brand:hover {
-  transform: translateY(-2px);
 }
 
 .navbar-brand h1 {
@@ -81,12 +73,7 @@ h3 { font-size: 1.5rem; }
 .logo-img {
   height: 50px;
   width: auto;
-  transition: var(--transition);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.logo-img:hover {
-  transform: rotate(5deg) scale(1.1);
 }
 
 .nav-link {
@@ -95,14 +82,12 @@ h3 { font-size: 1.5rem; }
   padding: 0.5rem 1rem !important;
   margin: 0 0.25rem;
   border-radius: 8px;
-  transition: var(--transition);
-  position: relative;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.1);
   color: white !important;
-  transform: translateY(-2px);
 }
 
 .nav-link.active {
@@ -114,30 +99,22 @@ h3 { font-size: 1.5rem; }
   margin-right: 0.5rem;
 }
 
-/* === CARDS === */
+/* === CARDS - SIMPLE AND SAFE === */
 .card {
   border: none;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
   background: white;
-  height: 100%;
 }
 
 .card:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
 .card-img-top {
   height: 250px;
   object-fit: cover;
-}
-
-/* Remove image scaling on hover - causes performance issues */
-.card:hover .card-img-top {
-  /* No transform */
 }
 
 .card-header {
@@ -185,7 +162,7 @@ a:hover {
   backdrop-filter: blur(10px);
 }
 
-/* === SKILL CARDS === */
+/* === SKILL CARDS - SIMPLE === */
 .skill-card {
   display: flex;
   flex-direction: column;
@@ -195,13 +172,11 @@ a:hover {
   background: white;
   border-radius: 16px;
   box-shadow: var(--shadow-md);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
   text-align: center;
   height: 100%;
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -215,17 +190,20 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Remove background animation on hover - causes performance issues */
-.skill-card:hover .skill-image-wrapper {
-  /* No transform or background change */
+  position: relative;
 }
 
 .skill-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skill-content {
+  text-align: center;
 }
 
 .skill-content h5 {
@@ -239,6 +217,7 @@ a:hover {
   color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.6;
+  margin-top: 0.5rem;
 }
 
 /* === BUTTONS === */
@@ -246,7 +225,7 @@ a:hover {
   border-radius: 8px;
   padding: 0.625rem 1.5rem;
   font-weight: 600;
-  transition: var(--transition);
+  transition: all 0.2s ease;
   border: none;
 }
 
@@ -256,7 +235,6 @@ a:hover {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent-color) 100%);
 }
@@ -270,7 +248,6 @@ a:hover {
 .btn-outline:hover {
   background: white;
   color: var(--primary-color);
-  transform: translateY(-2px);
 }
 
 /* === FOOTER === */
@@ -292,13 +269,12 @@ a:hover {
 .site-footer a {
   color: #cbd5e1;
   text-decoration: none;
-  transition: var(--transition);
+  transition: color 0.2s ease;
   display: inline-block;
 }
 
 .site-footer a:hover {
   color: white;
-  transform: translateX(5px);
 }
 
 .site-footer .list-unstyled li {
@@ -315,7 +291,6 @@ a:hover {
 
 .site-footer .btn-link:hover {
   color: white;
-  transform: translateX(0);
 }
 
 .site-footer i {
@@ -335,7 +310,7 @@ a:hover {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
-  transition: var(--transition);
+  transition: color 0.2s ease;
 }
 
 .breadcrumb-item a:hover {
@@ -351,7 +326,7 @@ a:hover {
   border: 2px solid var(--border-color);
   border-radius: 8px;
   padding: 0.75rem 1rem;
-  transition: var(--transition);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   font-size: 1rem;
 }
 
@@ -424,6 +399,26 @@ a:hover {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* === USER LOGIN === */
+.navbar-text img {
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === BLOCKQUOTE STYLING === */
+blockquote.blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+blockquote .blockquote-footer {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .page-title {
@@ -448,23 +443,6 @@ a:hover {
   }
 }
 
-/* === ANIMATIONS === */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Remove auto-animation on cards - causes performance issues */
-/* .card, .skill-card {
-  animation: fadeInUp 0.5s ease-out;
-} */
-
 /* === UTILITY CLASSES === */
 .text-gradient {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
@@ -475,24 +453,4 @@ a:hover {
 
 .bg-gradient {
   background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-}
-
-/* === USER LOGIN === */
-.navbar-text img {
-  border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* === BLOCKQUOTE STYLING === */
-blockquote.blockquote {
-  border-left: 4px solid var(--accent-color);
-  padding-left: 1.5rem;
-  font-style: italic;
-  color: var(--text-light);
-}
-
-blockquote .blockquote-footer {
-  color: var(--text-light);
-  font-size: 0.9rem;
 }
