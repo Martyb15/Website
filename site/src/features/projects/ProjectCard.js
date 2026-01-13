@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({project}) => {
     const {image, name, id} = project
+    
     return(
-        <Link to={`${id}`}>
-            
+        <Link to={`${id} style={{ textDecoration: 'none' }}`}>
             <Card>
-            <div style={{position:'relative'}}>
+            // <div style={{position:'relative'}}>
   {/* translucent sheet */}
-  <div style={{
-    position:'absolute',
-    inset:0,
-    background:'rgba(255,255,255,0.7)',
-    borderRadius:'inherit'
-  }} />
+  // <div style={{
+  //   position:'absolute',
+  //   inset:0,
+  //   background:'rgba(255,255,255,0.7)',
+  //   borderRadius:'inherit'
+  // }} />
 
   {/* real header text on opaque layer */}
   <CardHeader
@@ -27,13 +27,15 @@ const ProjectCard = ({project}) => {
     //   fontFamily: '"Fira Code", monospace',
       // fontWeight: 'bold',
     //   textShadow: '.75px .5px 1.5px rgba(0, 0, 0, 0.9)',
-      fontSize: '1.25rem',
+      fontSize: '600',
+      color: #1e293b, 
+        fontWeight: 600,
     //   border: '3px solid rgba(0, 0, 0, 0.9)',
     }}
   >
     {name}
   </CardHeader>
-</div>
+    // </div>
 
                 <CardImg 
                 width='100' 
