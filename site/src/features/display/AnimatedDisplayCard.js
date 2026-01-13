@@ -11,7 +11,7 @@ const AnimatedDisplayCard = ({ item }) => {
         opacity: toggle ? 1 : 0,
         transform: toggle ? (isHovered ? 'scale(1.03)' : 'scale(1)') : 'scale(0.9)',
         boxShadow: toggle ? (isHovered ? '0 15px 25px rgba(0,0,0,0.3)' : '0 10px 20px rgba(0,0,0,0.2)') : '0 0 0 rgba(0,0,0,0)',
-        config: { tension: 300, friction: 10 }
+        config: { tension: 200, friction: 26 }
     });
 
     useEffect(() => {
