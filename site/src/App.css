@@ -115,6 +115,17 @@ h3 { font-size: 1.5rem; }
   box-shadow: var(--shadow-lg);
 }
 
+.animated-display-card {
+  border-radius: 16px;
+  will-change: transform, opacity;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.animated-display-card:hover {
+  transform: translateZ(0) scale(1.01);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 .card-img-top {
   height: 250px;
   object-fit: cover;
