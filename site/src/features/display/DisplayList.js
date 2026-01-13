@@ -5,16 +5,19 @@ import { selectFeaturedProject } from '../projects/projectsSlice';
 import { selectFeaturedCertifications } from '../certifications/certificationsSlice';
 import { selectFeaturedSkill } from '../skills/skillsSlice';
 import { useSelector } from 'react-redux';
+import { createSelector } from '@reduxjs/toolkit';
 import Error from '../../components/Error';
 import Loading from '../../components/Loading';
 
+const selectFeaturedItems = createSelector(
+    [selectFeaturedProject, selectFeaturedCertifications, selectFeaturedSkill],
+    (project, cert, skill) => [project, cert, skill]
+);
+
 
 const DisplayList = () => {
-    const items = useSelector((state) => [
-        selectFeaturedProject(state),
-        selectFeaturedCertifications(state),
-        selectFeaturedSkill(state)
-    ]);
+    const items = useSelector(selectFeaturedItems);
+    
     return(
         <Row>
             {items.map((item,idx) => {
