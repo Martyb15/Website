@@ -7,16 +7,7 @@ const ProjectCard = ({ project }) => {
     return (
         <Link to={`${id}`} style={{ textDecoration: 'none' }}>
             <Card>
-                <CardHeader
-                    className="px-3 py-2 rounded"
-                    style={{
-                        position: 'relative',
-                        background: '#fff',
-                        color: '#1e293b',
-                        fontSize: '1.25rem',
-                        fontWeight: 600,
-                    }}
-                >
+                <CardHeader className="project-card-header">
                     {name}
                 </CardHeader>
                 <CardImg 
