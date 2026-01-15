@@ -53,13 +53,13 @@ const Footer = () => {
                         </a> </Col> */}
 
                         
-                    <Col sm='6' className='text-center'>                         <a
-                            role='button'
-                            className='btn btn-link'
-                            href='tel:+17144204288'
-                        >
-                            <i className='fa fa-phone' /> +1(714)-420-4288
-                        </a>
+                    // <Col sm='6' className='text-center'>                         <a
+                    //         role='button'
+                    //         className='btn btn-link'
+                    //         href='tel:+17144204288'
+                    //     >
+                    //         <i className='fa fa-phone' /> +1(714)-420-4288
+                    //     </a>
                         <br />
                         <a
                             role='button'
