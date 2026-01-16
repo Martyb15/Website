@@ -26,8 +26,9 @@ const ContactPage = () => {
                              href='tel:+17144204288'
                          >
                              <i className='fa fa-phone' /> 1-714-420-4288
-                    */}     </a>
+                         </a>
                         <br />
+    */}
                         <a
                             role='button'
                             className='btn btn-link'
