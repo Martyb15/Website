@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom"
 import HomePage from './pages/HomePage.js';
 import ContactPage from './pages/ContactPage.js';
 import ProjectDetailPage from './pages/ProjectsDetailPage.js'; 
+import ChainmailBackground from './components/ChainmailBackground';
 import AboutPage from './pages/AboutPage.js';
 import { useSelector } from 'react-redux';    
 import { useEffect } from 'react';
@@ -15,6 +16,7 @@ import { fetchProjects } from './features/projects/projectsSlice.js';
 import { fetchSkills } from './features/skills/skillsSlice.js';
 import { fetchCertification } from './features/certifications/certificationsSlice.js';
 import { fetchComments } from './features/comments/commentsSlice.js';
+
 
 function App() {
   const dispatch = useDispatch(); 
@@ -35,7 +37,7 @@ function App() {
 <div className="d-flex flex-column min-vh-100">
       <Header />
 
-      
+       <ChainmailBackground />
       <main className="flex-fill container">
         <Routes>
         <Route path="/"                    element={<HomePage              />}/>

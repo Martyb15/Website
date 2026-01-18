@@ -1,0 +1,41 @@
+.typewriter-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 150px 20px;
+  text-align: center;
+}
+
+.typewriter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin: 0;
+  min-height: 1.2em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cursor {
+  font-weight: 400;
+  margin-left: 2px;
+  color: #ffffff;
+}
+
+.cursor.blink {
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+.cursor.hidden {
+  opacity: 0;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
