@@ -1,10 +1,9 @@
-
 /* === ROOT VARIABLES === */
 :root {
-  --primary-color: #2563eb;
-  --primary-dark: #1e40af;
-  --secondary-color: #64748b;
-  --accent-color: #8b5cf6;
+  --primary-color: #d9632c;
+  --primary-dark: #c4521e;
+  --secondary-color: #336be2;
+  --accent-color: #e44b1d;
   --text-dark: #1e293b;
   --text-light: #64748b;
   --bg-light: #f8fafc;
@@ -18,7 +17,7 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   color: var(--text-dark);
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #fef3ec 100%);
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -43,7 +42,7 @@ h3 { font-size: 1.5rem; }
 .page-title {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -91,7 +90,7 @@ h3 { font-size: 1.5rem; }
 }
 
 .nav-link.active {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(217, 99, 44, 0.25);
   color: white !important;
 }
 
@@ -107,9 +106,6 @@ h3 { font-size: 1.5rem; }
   box-shadow: var(--shadow-md);
   background: white;
 }
-
-/* Project Directory Card Headers */
-
 
 .card:hover {
   box-shadow: var(--shadow-lg);
@@ -132,7 +128,7 @@ h3 { font-size: 1.5rem; }
 }
 
 .card-header {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white !important;
   font-weight: 600;
   font-size: 1.25rem;
@@ -183,6 +179,30 @@ a:hover {
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
 }
+
+/* === FLAGSHIP CARDS === */
+.directory-card {
+    cursor: pointer;
+}
+
+.directory-card .flagship-desc {
+    /* Clamp description to 3 lines so cards stay uniform height */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.directory-card .flagship-bullets {
+    /* Clamp bullets to 2 items visually */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
 
 /* === SKILL CARDS - SIMPLE === */
 .skill-card {
@@ -252,13 +272,13 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, var(--primary-color)0%, var(--secondary-color) 100%);
+  box-shadow: 0 4px 12px rgba(217, 44, 217, 0.3);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent-color) 100%);
+  box-shadow: 0 6px 16px rgba(217, 99, 44, 0.4);
+  background: var(--primary-color);
 }
 
 .btn-outline {
@@ -316,7 +336,7 @@ a:hover {
 }
 
 .site-footer i {
-  color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 /* === BREADCRUMBS === */
@@ -336,7 +356,7 @@ a:hover {
 }
 
 .breadcrumb-item a:hover {
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 .breadcrumb-item.active {
@@ -354,7 +374,7 @@ a:hover {
 
 .form-control:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px rgba(217, 99, 44, 0.1);
   outline: none;
 }
 
@@ -378,7 +398,7 @@ a:hover {
 }
 
 .modal-header {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
   border-radius: 16px 16px 0 0;
   padding: 1.5rem;
@@ -387,6 +407,7 @@ a:hover {
 .modal-title {
   font-weight: 700;
   font-size: 1.5rem;
+  color: rgb(255, 255, 255);  
 }
 
 .modal-body {
@@ -430,7 +451,7 @@ a:hover {
 
 /* === BLOCKQUOTE STYLING === */
 blockquote.blockquote {
-  border-left: 4px solid var(--accent-color);
+  border-left: 4px solid var(--primary-color);
   padding-left: 1.5rem;
   font-style: italic;
   color: var(--text-light);
@@ -445,6 +466,7 @@ blockquote .blockquote-footer {
 @media (max-width: 768px) {
   .page-title {
     font-size: 2rem;
+    
   }
   
   .navbar-brand h1 {
@@ -467,12 +489,12 @@ blockquote .blockquote-footer {
 
 /* === UTILITY CLASSES === */
 .text-gradient {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .bg-gradient {
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #fef3ec 100%);
 }
