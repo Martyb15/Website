@@ -17,7 +17,7 @@ const HeroSection = () => {
 
                         <div className="hero-buttons">
                             {/* TODO: replace # with your hosted resume PDF */}
-                            <a href="#" className="hero-btn hero-btn-primary" target="_blank" rel="noreferrer">
+                           <a href="/Martin_Barrios_Resume.pdf" className="hero-btn hero-btn-primary" target="_blank" rel="noreferrer">
                                 <i className="fa fa-file-pdf-o" /> Resume
                             </a>
                             <a href="https://github.com/Martyb15" className="hero-btn hero-btn-outline" target="_blank" rel="noreferrer">
