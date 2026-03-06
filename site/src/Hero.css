@@ -1,0 +1,272 @@
+/* ============================================
+   CSS VARIABLES (used by hero + flagship cards)
+   ============================================ */
+
+:root {
+    --primary-color: #2563eb;
+    --accent-color: #8b5cf6;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --border-color: #e2e8f0;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    padding: 5rem 0 4rem;
+    background: linear-gradient(160deg, #c7c3c8 0%, #1e293b 50%, #e1e1ec 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle grid texture */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.hero-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: #d9632c;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.hero-name {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.hero-oneliner {
+    font-size: 1.15rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.hero-btn-primary {
+    background: linear-gradient(135deg, #e44b1d, #d9632c);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(1, 3, 9, 0.35);
+}
+
+.hero-btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.hero-btn-outline {
+    border: 1.5px solid #d9632c;
+    color: #cbd5e1;
+    background: transparent;
+}
+
+.hero-btn-outline:hover {
+    border-color: #336be2;
+    color: #f1f5f9;
+    background: rgba(139, 92, 246, 0.08);
+}
+
+/* ============================================
+   FLAGSHIP PROJECTS SECTION
+   ============================================ */
+
+.flagship-section {
+    padding: 4rem 0;
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.section-sub {
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.section-sub a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.section-sub a:hover {
+    color: var(--accent-color);
+}
+
+/* ---- Flagship Card ---- */
+
+.flagship-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.75rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.flagship-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: #336be2;
+}
+
+.flagship-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.flagship-desc {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Tech chips */
+.flagship-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.flagship-chip {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+/* Bullets */
+.flagship-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    flex-grow: 1;
+}
+
+.flagship-bullets li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.flagship-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Proof links row */
+.flagship-proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.proof-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.proof-link:hover {
+    color: var(--accent-color);
+}
+
+.proof-link i {
+    font-size: 1rem;
+}
+
+/* ============================================
+   RESPONSIVE TWEAKS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3.5rem 0 3rem;
+    }
+
+    .hero-name {
+        font-size: 2.25rem;
+    }
+
+    .hero-oneliner {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .flagship-section {
+        padding: 3rem 0;
+    }
+}

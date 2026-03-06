@@ -1,14 +1,13 @@
-import { Container } from 'reactstrap';
-import DisplayList from '../features/display/DisplayList';
-import SubHeader from '../components/SubHeader';
+import HeroSection from '../components/HeroSection';
+import FlagshipProjects from '../components/FlagshipProjects';
 
 const HomePage = () => {
-    return(
-        <Container>
-            <SubHeader current="Home" /> 
-            <DisplayList />
-        </Container>
-    )
-}
+    return (
+        <>
+            <HeroSection />
+            <FlagshipProjects />
+        </>
+    );
+};
 
-export default HomePage; 
+export default HomePage;

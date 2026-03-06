@@ -15,6 +15,7 @@ import { fetchProjects } from './features/projects/projectsSlice.js';
 import { fetchSkills } from './features/skills/skillsSlice.js';
 import { fetchCertification } from './features/certifications/certificationsSlice.js';
 import { fetchComments } from './features/comments/commentsSlice.js';
+import './Hero.css';
 
 function App() {
   const dispatch = useDispatch(); 
@@ -36,7 +37,8 @@ function App() {
       <Header />
 
       
-      <main className="flex-fill container">
+      {/* <main className="flex-fill container"> */}
+      <main className="flex-fill">
         <Routes>
         <Route path="/"                    element={<HomePage              />}/>
           <Route path="contact"              element={<ContactPage           />}/>
