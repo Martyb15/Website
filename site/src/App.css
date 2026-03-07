@@ -42,11 +42,13 @@ h3 { font-size: 1.5rem; }
 .page-title {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
+  background: rgb(63, 62, 60);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
+  color: black; 
 }
 
 /* === NAVBAR === */
@@ -466,8 +468,10 @@ blockquote .blockquote-footer {
 @media (max-width: 768px) {
   .page-title {
     font-size: 2rem;
+    color: black; 
     
   }
+
   
   .navbar-brand h1 {
     font-size: 1.25rem;
