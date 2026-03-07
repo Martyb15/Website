@@ -11,7 +11,7 @@ const FLAGSHIP_PROJECTS = [
             'pytest suite covering remittance escrow lifecycle, staking, PoS mining, and slashing',
         ],
         links: {
-            repo: 'https://github.com/Martyb15',   // TODO: exact repo URL
+            repo: 'https://github.com/Martyb15/Blockchain',   // TODO: exact repo URL
             demo: '',                                // TODO: demo video link
             tests: '',                               // TODO: screenshot of pytest output
         },
@@ -28,7 +28,7 @@ const FLAGSHIP_PROJECTS = [
             'Structured logging with per-upload latency metrics (hash_ms, total_ms) for operational KPIs',
         ],
         links: {
-            repo: 'https://github.com/Martyb15',   // TODO: exact repo URL
+            repo: 'https://github.com/Martyb15/malware-sandbox-project',   // TODO: exact repo URL
             demo: '',                                // TODO: demo video or EICAR test screenshot
             tests: '',                               // TODO: test output screenshot
         },
