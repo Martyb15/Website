@@ -5,6 +5,7 @@ import { selectCommentsByProjectId } from './commentsSlice';
 import { useSelector } from 'react-redux';
 import Error from '../../components/Error';
 import Loading from '../../components/Loading';
+import '../../features/projects/ProjectDetail.css';
 
 const CommentsList = ({ projectId }) => {
   const { isLoading, errMsg } = useSelector((state) => state.comments);
@@ -14,21 +15,26 @@ const CommentsList = ({ projectId }) => {
   if (errMsg)     return <Error errMsg={errMsg} />;
 
   return (
-    <Col md="5" className="m-1">
-      <h4>Comments</h4>
+    <Col xs="12" style={{ maxWidth: 900 }}>
+      <div className="pd-section-card">
+        <div className="pd-section-label">
+          Comments ({comments.length})
+        </div>
 
-      {/* show a message when the list is empty */}
-      {comments.length === 0 && (
-        <p className="text-muted">There are no comments for this project yet.</p>
-      )}
+        {comments.length === 0 && (
+          <p style={{ color: 'var(--text-light)', fontStyle: 'italic', fontSize: '0.9rem' }}>
+            No comments yet — be the first to leave feedback.
+          </p>
+        )}
 
-      {/* render any existing comments */}
-      {comments.map((c) => (
-        <Comment key={c.id} comment={c} />
-      ))}
+        {comments.map((c) => (
+          <Comment key={c.id} comment={c} />
+        ))}
 
-      {/* always show the form/button */}
-      <CommentForm projectId={projectId} />
+        <div style={{ marginTop: comments.length > 0 ? '1rem' : '0.5rem' }}>
+          <CommentForm projectId={projectId} />
+        </div>
+      </div>
     </Col>
   );
 };

@@ -1,14 +1,8 @@
 /* ============================================
-   CSS VARIABLES (used by hero + flagship cards)
+   HERO SECTION & FLAGSHIP CARDS
+   CSS variables are defined in App.css — 
+   do NOT redefine them here.
    ============================================ */
-
-:root {
-    --primary-color: #2563eb;
-    --accent-color: #8b5cf6;
-    --text-dark: #1e293b;
-    --text-light: #64748b;
-    --border-color: #e2e8f0;
-}
 
 /* ============================================
    HERO SECTION
@@ -85,7 +79,7 @@
 }
 
 .hero-btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    box-shadow: 0 6px 20px rgba(217, 99, 44, 0.5);
     color: #fff;
     transform: translateY(-1px);
 }
@@ -99,7 +93,7 @@
 .hero-btn-outline:hover {
     border-color: #336be2;
     color: #f1f5f9;
-    background: rgba(139, 92, 246, 0.08);
+    background: rgba(51, 107, 226, 0.08);
 }
 
 /* ============================================
@@ -124,7 +118,7 @@
 }
 
 .section-sub a {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 600;
     text-decoration: none;
 }
@@ -148,7 +142,8 @@
 
 .flagship-card:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border-color: #336be2;
+    /* border-color: #336be2; */
+    border-color: var(--primary-color);
 }
 
 .flagship-title {
@@ -225,7 +220,7 @@
     gap: 0.35rem;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.15s ease;
 }

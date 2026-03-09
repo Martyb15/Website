@@ -16,12 +16,15 @@ const HeroSection = () => {
                         </p>
 
                         <div className="hero-buttons">
-                            {/* TODO: replace # with your hosted resume PDF */}
-                           <a href="/Martin_Barrios.pdf" className="hero-btn hero-btn-primary" target="_blank" rel="noreferrer">
+                            <a href="/Martin_Barrios.pdf" className="hero-btn hero-btn-primary" target="_blank" rel="noreferrer">
                                 <i className="fa fa-file-pdf-o" /> Resume
                             </a>
                             <a href="https://github.com/Martyb15" className="hero-btn hero-btn-outline" target="_blank" rel="noreferrer">
                                 <i className="fa fa-github" /> GitHub
+                            </a>
+                            {/* TODO: Replace with your actual LinkedIn URL */}
+                            <a href="https://www.linkedin.com/in/martin-barrios-8054531b2/" className="hero-btn hero-btn-outline" target="_blank" rel="noreferrer">
+                                <i className="fa fa-linkedin" /> LinkedIn
                             </a>
                             <a href="mailto:Barrios.Martin.Jr@gmail.com" className="hero-btn hero-btn-outline">
                                 <i className="fa fa-envelope-o" /> Contact

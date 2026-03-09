@@ -7,8 +7,9 @@ import { Routes, Route } from "react-router-dom"
 import HomePage from './pages/HomePage.js';
 import ContactPage from './pages/ContactPage.js';
 import ProjectDetailPage from './pages/ProjectsDetailPage.js'; 
-import AboutPage from './pages/AboutPage.js';
-import { useSelector } from 'react-redux';    
+import AboutPage from './pages/AboutPage.js'; 
+import NotFoundPage from './pages/NotFoundPage.js';
+import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchProjects } from './features/projects/projectsSlice.js';
@@ -29,7 +30,7 @@ function App() {
 
 
   const wholeStore = useSelector(state => state);   
-  console.log('Store contents:', wholeStore);       
+  // console.log('Store contents:', wholeStore);       
 
 
   return (
@@ -40,11 +41,12 @@ function App() {
       {/* <main className="flex-fill container"> */}
       <main className="flex-fill">
         <Routes>
-        <Route path="/"                    element={<HomePage              />}/>
+          <Route path="/"                    element={<HomePage              />}/>
           <Route path="contact"              element={<ContactPage           />}/>
           <Route path="directory"            element={<ProjectsDirectoryPage />} />
           <Route path='directory/:projectId' element={<ProjectDetailPage     />} />
           <Route path='about'                element={<AboutPage             />} />
+          <Route path='*'                    element={<NotFoundPage          />} />
         </Routes>
       </main>
 

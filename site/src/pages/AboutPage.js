@@ -1,97 +1,115 @@
-import { Col, Row, Container, Card, CardBody, CardHeader } from "reactstrap";
+import { Col, Row, Container } from "reactstrap";
 import SkillsList from "../features/skills/SkillsList";
 import SubHeader from "../components/SubHeader";
+import '../features/projects/ProjectDetail.css';
 
 const AboutPage = () => {
     return (
         <Container>
             <SubHeader current="About Me" />
 
-            <Row className="row-content">
-                <Col sm="6">
-                    <h3>Who I Am</h3>
-                    <p>
-                        I'm a recent CS grad (Liberty University, Cybersecurity concentration)
-                        based in Orange County, CA. I build backend APIs and security tooling
-                        with Python and Node, and I care about things actually working and 
-                        being secure. 
-                        
-                    </p>
-                    <p>
-                        Before graduating I spent time teaching programming at The Coder School,
-                        where I managed ~25 students weekly and wrote session notes breaking down
-                        technical concepts. That experience made me a better communicator and a
-                        better code reader.
-                    </p>
-                    <p>
-                        I'm looking for junior backend, security/AppSec-adjacent, or SDET roles.
-                        If you want to see what I've built, the{' '}
-                        <a href="/">homepage</a> has my flagship projects with repos and demos.
-                    </p>
+            <Row className="mb-5">
+                {/* Left: Bio */}
+                <Col lg="7" className="mb-4">
+                    <div className="pd-section-card" style={{ borderTop: '3px solid var(--primary-color)' }}>
+                        <div className="pd-section-label pd-section-label--primary">Who I Am</div>
+                        <p className="pd-description">
+                            I'm a recent CS grad (Liberty University, Cybersecurity concentration)
+                            based in Orange County, CA. I build backend APIs and security tooling
+                            with Python and Node, and I care about things actually working and
+                            being secure.
+                        </p>
+                        <p className="pd-description" style={{ marginTop: '1rem' }}>
+                            Before graduating I spent time teaching programming at The Coder School,
+                            where I managed ~25 students weekly and wrote session notes breaking down
+                            technical concepts. That experience made me a better communicator and a
+                            better code reader.
+                        </p>
+                        <p className="pd-description" style={{ marginTop: '1rem' }}>
+                            I'm looking for junior backend, security/AppSec-adjacent, or SDET roles.
+                            If you want to see what I've built, the{' '}
+                            <a href="/" style={{ color: 'var(--primary-color)', fontWeight: 600 }}>homepage</a> has
+                            my flagship projects with repos and demos.
+                        </p>
+                    </div>
                 </Col>
 
-                <Col sm="6">
-                    <Card>
-                        <CardHeader className="bg-secondary text-white">
-                            <h3>At a Glance</h3>
-                        </CardHeader>
-                        <CardBody>
-                            <dl className="row">
-                                <dt className="col-6">Location</dt>
-                                <dd className="col-6">Yorba Linda, CA</dd>
+                {/* Right: At a Glance */}
+                <Col lg="5" className="mb-4">
+                    <div className="pd-section-card" style={{ borderTop: '3px solid var(--secondary-color)' }}>
+                        <div className="pd-section-label pd-section-label--secondary">At a Glance</div>
+                        <table style={{ width: '100%', fontSize: '0.92rem' }}>
+                            <tbody>
+                                {[
+                                    ['Location', 'Yorba Linda, CA'],
+                                    ['Degree', 'B.S. Computer Science (Cybersecurity)'],
+                                    ['University', 'Liberty University'],
+                                    ['Graduated', 'May 2025'],
+                                    ['Targeting', 'Backend, AppSec, SDET'],
+                                    ['Open to', 'Remote, hybrid, or onsite'],
+                                ].map(([label, value], i) => (
+                                    <tr key={i} style={{ borderBottom: '1px solid var(--border-color)' }}>
+                                        <td style={{
+                                            padding: '10px 12px 10px 0',
+                                            fontWeight: 600,
+                                            color: 'var(--text-dark)',
+                                            whiteSpace: 'nowrap',
+                                            width: '40%',
+                                        }}>
+                                            {label}
+                                        </td>
+                                        <td style={{
+                                            padding: '10px 0',
+                                            color: 'var(--text-light)',
+                                        }}>
+                                            {value}
+                                        </td>
+                                    </tr>
+                                ))}
+                                <tr>
+                                    <td style={{
+                                        padding: '10px 12px 10px 0',
+                                        fontWeight: 600,
+                                        color: 'var(--text-dark)',
+                                    }}>
+                                        GitHub
+                                    </td>
+                                    <td style={{ padding: '10px 0' }}>
+                                        <a href="https://github.com/Martyb15" target="_blank" rel="noreferrer"
+                                           style={{ color: 'var(--primary-color)', fontWeight: 600 }}>
+                                            Martyb15
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                                <dt className="col-6">Degree</dt>
-                                <dd className="col-6">B.S. Computer Science (Cybersecurity), Liberty University</dd>
-
-                                <dt className="col-6">Graduated</dt>
-                                <dd className="col-6">May 2025</dd>
-
-                                <dt className="col-6">GitHub</dt>
-                                <dd className="col-6">
-                                    <a href="https://github.com/Martyb15" target="_blank" rel="noreferrer">
-                                        Martyb15
-                                    </a>
-                                </dd>
-
-                                <dt className="col-6">Targeting</dt>
-                                <dd className="col-6">Backend, AppSec, SDET</dd>
-
-                                <dt className="col-6">Open to</dt>
-                                <dd className="col-6">Remote, hybrid, or onsite</dd>
-                            </dl>
-                        </CardBody>
-                    </Card>
+                    {/* Quote */}
+                    <div className="pd-section-card" style={{ marginTop: '20px' }}>
+                        <blockquote style={{ margin: 0, fontStyle: 'italic', color: 'var(--text-light)', lineHeight: 1.7 }}>
+                            <p style={{ marginBottom: '0.75rem', fontSize: '0.95rem' }}>
+                                "I realized that collecting intelligence and understanding
+                                what an adversary's motivations are and where they're headed
+                                is fundamental to cybersecurity."
+                            </p>
+                            <footer style={{ fontSize: '0.82rem', color: 'var(--text-light)' }}>
+                                — Dmitri Alperovitch, CrowdStrike Co-Founder
+                            </footer>
+                        </blockquote>
+                    </div>
                 </Col>
             </Row>
 
-            <Row className="row-content">
-                <Col className="col-12">
-                    <h3>Skills</h3>
+            {/* Skills Section */}
+            <Row className="mb-4">
+                <Col xs="12">
+                    <div className="pd-section-label pd-section-label--primary" style={{ fontSize: '0.8rem' }}>
+                        Technical Skills
+                    </div>
                 </Col>
-                <Col className="col-12">
+                <Col xs="12">
                     <SkillsList />
-                </Col>
-            </Row>
-
-            <Row className="row-content">
-                <Col>
-                    <Card className="bg-light mt-3">
-                        <CardBody>
-                            <blockquote className="blockquote">
-                                <p>
-                                    I realized that collecting intelligence and understanding
-                                    what an adversary's motivations are and where they're headed
-                                    is fundamental to cybersecurity.
-                                </p>
-                                <footer className="blockquote-footer">
-                                    Dmitri Alperovitch,{' '}
-                                    <cite title="CrowdStrike Co-Founder">
-                                        CrowdStrike Co-Founder
-                                    </cite>
-                                </footer>
-                            </blockquote>
-                        </CardBody>
-                    </Card>
                 </Col>
             </Row>
         </Container>
