@@ -39,7 +39,7 @@ const ProjectDetailPage = () => {
 
     return (
         <Container>
-            {project && <SubHeader current={project.name} detail={true} />}
+            {project && <SubHeader current={project.name} detail={true} titleHidden={true} />}
             {content}
         </Container>
     );
