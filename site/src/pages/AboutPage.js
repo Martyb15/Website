@@ -14,10 +14,13 @@ const AboutPage = () => {
                     <div className="pd-section-card" style={{ borderTop: '3px solid var(--primary-color)' }}>
                         <div className="pd-section-label pd-section-label--primary">Who I Am</div>
                         <p className="pd-description">
-                            I'm a recent CS grad (Liberty University, Cybersecurity concentration)
-                            based in Orange County, CA. I build backend APIs and security tooling
-                            with Python and Node, and I care about things actually working and
-                            being secure.
+                            I’m Martin Barrios, a software and cybersecurity-focused developer based in
+                            Orange County, California. I build systems that are practical, secure, and
+                            easy to understand. My background includes backend development, web
+                            applications, automation, databases, and security testing. I’ve built
+                            projects in Python, JavaScript, C++, SQL, React, and Node.js, and I bring a
+                            teaching mindset to my work: solve the problem, understand the system, and
+                            explain it clearly.
                         </p>
                         <p className="pd-description" style={{ marginTop: '1rem' }}>
                             Before graduating I spent time teaching programming at The Coder School,

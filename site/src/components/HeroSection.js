@@ -11,8 +11,8 @@ const HeroSection = () => {
                         </p>
                         <h1 className="hero-name">Martin Barrios</h1>
                         <p className="hero-oneliner">
-                            I build backend APIs and automation using Python/Node, with emphasis on
-                            correctness (tests), clear documentation, and reproducible demos.
+                            I build backend APIs and automation using Python/Node, with a focus on
+                            correctness (tests), clear documentation, and reliable demos.
                         </p>
 
                         <div className="hero-buttons">

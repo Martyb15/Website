@@ -274,12 +274,13 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-color)0%, var(--secondary-color) 100%);
-  box-shadow: 0 4px 12px rgba(217, 44, 217, 0.3);
+  /* background: linear-gradient(135deg, var(--primary-color)0%, var(--secondary-color) 100%); */
+  background: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(7, 0, 7, 0.3);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 6px 16px rgba(217, 99, 44, 0.4);
+  box-shadow: 0 6px 16px rgba(118, 85, 3, 0.4);
   background: var(--primary-color);
 }
 
