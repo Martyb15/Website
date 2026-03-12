@@ -188,19 +188,23 @@ a:hover {
 }
 
 .directory-card .flagship-desc {
-    /* Clamp description to 3 lines so cards stay uniform height */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.directory-card .flagship-bullets {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-.directory-card .flagship-bullets {
-    /* Clamp bullets to 2 items visually */
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+.directory-card .flagship-bullets li {
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
